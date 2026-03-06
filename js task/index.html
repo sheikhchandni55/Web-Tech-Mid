@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; }
+        h2 { color: #333; }
+        .input-group { margin-bottom: 10px; }
+        input[type="text"], input[type="number"] {
+            padding: 8px;
+            margin-right: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+ body {
+      background-color: rgb(173, 230, 229);
+    }
+        button {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: #2196F3;
+            color: white;
+        }
+        button:disabled {
+            background-color: #90caf9;
+            cursor: not-allowed;
+        }
+        ul { padding: 0; }
+        li {
+            list-style: none;
+            margin-bottom: 8px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        li.present { background-color: #518e1f; color: #155724; }
+        li.highlight { border: 2px solid #ff9800; background-color: #fff3cd; }
+        .student-info { flex-grow: 1; }
+        .controls button { margin-left: 5px; background-color: #ff5722; }
+        .controls button.edit { background-color: #4caf50; }
+        #stats { margin-top: 15px; }
+    </style>
+</head>
+<body>
+
+<h2>Student Management System</h2>
+
+<div class="input-group">
+    <input type="number" id="rollInput" placeholder="Roll No.">
+    <input type="text" id="nameInput" placeholder="Student Name">
+    <button id="addBtn" disabled>Add Student</button>
+</div>
+
+<div class="input-group">
+    <input type="text" id="search" placeholder="Search student">
+</div>
+
+<ul id="studentList"></ul>
+
+<div id="stats">
+    <p id="total">Total students: 0</p>
+    <p id="presentCount">Present: 0, Absent: 0</p>
+</div>
+
+<div class="input-group">
+    <button id="sortBtn">Sort A–Z</button>
+    <button id="highlightBtn">Highlight First Student</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
